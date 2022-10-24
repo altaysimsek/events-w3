@@ -1,13 +1,13 @@
 const hre = require("hardhat");
 
 async function main() {
-  const TodoList = await hre.ethers.getContractFactory("TodoList");
-  const todoList = await TodoList.deploy();
+  const Events = await hre.ethers.getContractFactory("Events");
+  const events = await Events.deploy();
 
-  await todoList.deployed();
+  await events.deployed();
 
-  console.log(`Lock with 1 ETH  deployed to ${todoList.address}`);
-  console.log(todoList);
+  console.log(`Lock with 1 ETH  deployed to ${events.address}`);
+  console.log(events);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
